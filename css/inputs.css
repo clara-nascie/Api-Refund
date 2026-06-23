@@ -1,0 +1,136 @@
+/* ==========================================
+   INPUTS, SELECTS E UPLOAD
+   ========================================== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.input-group label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gray-200);
+  text-transform: uppercase;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-300);
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 0 16px;
+  height: 48px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--green-100);
+  box-shadow: 0 0 0 3px var(--green-light);
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: var(--gray-100);
+}
+
+.input-wrapper input::placeholder {
+  color: var(--gray-200);
+  opacity: 0.7;
+}
+
+/* Área de Upload */
+.file-drop-area {
+  border: 2px dashed var(--gray-300);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  background-color: var(--white);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  height: 112px;
+}
+
+.file-drop-area:hover {
+  border-color: var(--green-100);
+  background-color: var(--green-light);
+}
+
+.file-drop-area i {
+  font-size: 32px;
+  color: var(--green-100);
+}
+
+.file-drop-area span {
+  font-size: 14px;
+  color: var(--gray-200);
+}
+
+.file-drop-area input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Arquivo Selecionado */
+.file-selected-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--gray-300);
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 0 16px;
+  height: 48px;
+  font-size: 14px;
+  color: var(--gray-100);
+}
+
+.file-selected-name i.ph-file-text {
+  color: var(--green-100);
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.file-selected-name span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 16px;
+}
+
+.file-selected-name button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--gray-200);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.file-selected-name button:hover {
+  color: var(--danger);
+}
