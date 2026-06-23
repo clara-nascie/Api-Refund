@@ -1,0 +1,109 @@
+/* ==========================================
+   DESIGN TOKENS & VARIÁVEIS GLOBAIS
+   ========================================== */
+:root {
+  --gray-100: #1F2523; /* Texto principal / Headers */
+  --gray-200: #4D5C57; /* Texto secundário / Labels */
+  --gray-300: #CDD5D2; /* Bordas / Divisórias */
+  --gray-400: #E4ECE9; /* Fundo principal da página */
+  --gray-500: #F9FBFA; /* Fundo dos cards e modais */
+  
+  --green-100: #1F8459; /* Cor principal de Destaque */
+  --green-200: #2CB178; /* Destaque em Hover */
+  --green-light: #E8F5EE; /* Fundo claro para badges/destaques */
+  
+  --white: #FFFFFF;
+  --danger: #DA3838;
+  --danger-light: #FCEAEA;
+  
+  /* Fontes */
+  --font-title: 'Plus Jakarta Sans', 'Open Sans', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-code: 'Martian Mono', monospace;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  
+  /* Transições */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--gray-400);
+  color: var(--gray-100);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Fade-in Animation para as visualizações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+/* Logo Placeholder */
+.logo-placeholder, .logo-placeholder-sm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--green-100);
+}
+
+.logo-placeholder i {
+  font-size: 40px;
+}
+
+.logo-placeholder span {
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.logo-placeholder-sm i {
+  font-size: 28px;
+}
+
+.logo-placeholder-sm span {
+  font-family: var(--font-title);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
