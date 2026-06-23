@@ -1,0 +1,155 @@
+/* ==========================================
+   PAINEL DO GESTOR (TABELA & PAGINAÇÃO)
+   ========================================== */
+.manager-card {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-300);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1080px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.manager-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.manager-card-header h2 {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-100);
+}
+
+.search-bar {
+  width: 320px;
+}
+
+.search-input-wrapper {
+  gap: 8px;
+}
+
+.search-icon {
+  font-size: 20px;
+  color: var(--gray-200);
+}
+
+/* Tabela */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.refund-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.refund-table th, 
+.refund-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--gray-400);
+}
+
+.refund-table th {
+  background-color: var(--gray-500);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gray-200);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--gray-300);
+}
+
+.refund-table tbody tr {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.refund-table tbody tr:hover {
+  background-color: var(--gray-500);
+}
+
+.refund-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Elementos da Linha da Tabela */
+.colab-cell {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.category-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* Cores específicas das categorias */
+.cat-alimentacao {
+  background-color: #FEECEB;
+  color: #EB5757;
+}
+
+.cat-transporte {
+  background-color: #EBF3FE;
+  color: #2F80ED;
+}
+
+.cat-hospedagem {
+  background-color: #E8F5EE;
+  color: #1F8459;
+}
+
+.cat-servicos {
+  background-color: #F3EBFD;
+  color: #9B51E0;
+}
+
+.cat-outros {
+  background-color: #F2F2F2;
+  color: #4F4F4F;
+}
+
+.colab-name {
+  font-weight: 600;
+  color: var(--gray-100);
+}
+
+.colab-category {
+  font-size: 12px;
+  color: var(--gray-200);
+}
+
+.value-cell {
+  font-weight: 600;
+  color: var(--gray-100);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.pagination-info {
+  font-size: 14px;
+  color: var(--gray-200);
+  font-weight: 600;
+}

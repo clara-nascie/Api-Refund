@@ -1,0 +1,131 @@
+/* ==========================================
+   MODAL DE DETALHES DO GESTOR
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(9, 9, 10, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 100;
+  animation: fadeIn var(--transition-fast) forwards;
+}
+
+.modal-card {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-300);
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 512px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-100);
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 24px;
+}
+
+.detail-row .detail-group {
+  flex: 1;
+}
+
+.detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-group label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gray-200);
+  text-transform: uppercase;
+}
+
+.detail-group p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-100);
+}
+
+.detail-category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+/* Categorias no Modal */
+.detail-category-tag.Alimentação { background-color: #FEECEB; color: #EB5757; }
+.detail-category-tag.Transporte { background-color: #EBF3FE; color: #2F80ED; }
+.detail-category-tag.Hospedagem { background-color: #E8F5EE; color: #1F8459; }
+.detail-category-tag.Serviços { background-color: #F3EBFD; color: #9B51E0; }
+.detail-category-tag.Outros { background-color: #F2F2F2; color: #4F4F4F; }
+
+.detail-value {
+  font-size: 18px !important;
+  color: var(--green-100) !important;
+}
+
+.document-preview-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--gray-300);
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.document-preview-box i {
+  font-size: 28px;
+  color: var(--danger);
+}
+
+.document-preview-box span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  color: var(--gray-100);
+}
+
+.modal-footer {
+  margin-top: 8px;
+}
