@@ -1,12 +1,10 @@
 # Refund - Sistema de Reembolso 2.0
 
-![Node](https://img.shields.io/badge/node-%3E%3D20.x-007acc?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.5-007acc?style=flat-square&logo=typescript)
-![Express](https://img.shields.io/badge/Express-4.19-7d7d7d?style=flat-square&logo=express)
-![Prisma](https://img.shields.io/badge/Prisma-5.19-5a29a6?style=flat-square&logo=prisma)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-0064a5?style=flat-square&logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-Enabled-00bfff?style=flat-square&logo=docker)
-![Coverage](https://img.shields.io/badge/Coverage-63%25-cbb000?style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 
 O **Refund** é uma aplicação web para solicitação e gerenciamento de reembolsos de despesas corporativas. Este projeto foi desenvolvido com base no layout do Figma fornecido pela comunidade da Rocketseat.
 
@@ -20,21 +18,15 @@ O design da aplicação pode ser acessado através do link abaixo:
 
 ## 🛠️ Tecnologias Utilizadas
 
-### Frontend (Atual)
 *   **HTML5** (Estrutura semântica das views)
-*   **CSS3 Vanilla** (Restruturado modularmente)
-*   **JavaScript Vanilla** (Interações, controle de estado local e roteamento)
-*   **Vite** (Servidor de desenvolvimento rápido e empacotamento)
+*   **CSS3 Vanilla** (Estilos organizados de forma modular)
+*   **JavaScript Vanilla** (Interações, controle de estado local e roteamento virtual)
+*   **Vite** (Servidor de desenvolvimento local rápido)
 *   **Phosphor Icons** (Ícones visuais consumidos via CDN)
-
-### Backend (Futuro)
-*   **Node.js** com **Express**
-*   **TypeScript**
-*   **Prisma ORM** (Banco de dados)
 
 ---
 
-## 📂 Estrutura de Pastas do Frontend
+## 📂 Estrutura de Pastas
 
 ```text
 Api Refund/
@@ -47,13 +39,12 @@ Api Refund/
 │   ├── inputs.css      # Inputs, selects e área de upload
 │   ├── manager.css     # Tabelas, paginação e visualizações de gestor
 │   └── modal.css       # Estilo do modal de detalhes (overlay/blur)
-├── src/
-│   └── server.ts       # Ponto de entrada do futuro backend em Express
+├── docs/               # Documentação modular das sessões
 ├── index.html          # HTML principal que agrupa as views (Single Page App)
 ├── main.js             # Lógica das telas, mocks e roteamento
 ├── style.css           # Agregador central do CSS que importa a pasta css/
-├── package.json        # Dependências e scripts do projeto
-└── tsconfig.json       # Configuração do TypeScript
+├── package.json        # Configuração do Vite e scripts do projeto
+└── .gitignore          # Arquivos e pastas ignorados pelo Git
 ```
 
 ---

@@ -1,12 +1,10 @@
 # ⚙️ Stack & Design System
 
-![Node](https://img.shields.io/badge/node-%3E%3D20.x-007acc?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.5-007acc?style=flat-square&logo=typescript)
-![Express](https://img.shields.io/badge/Express-4.19-7d7d7d?style=flat-square&logo=express)
-![Prisma](https://img.shields.io/badge/Prisma-5.19-5a29a6?style=flat-square&logo=prisma)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-0064a5?style=flat-square&logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-Enabled-00bfff?style=flat-square&logo=docker)
-![Coverage](https://img.shields.io/badge/Coverage-63%25-cbb000?style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 
 Este documento detalha os benchmarks de tecnologia, o ambiente técnico do projeto, as configurações de design extraídas do Figma e as decisões de infraestrutura de código. Este documento deve ser mantido atualizado à medida que novas tecnologias ou linguagens forem incorporadas ao ecossistema da aplicação.
 
