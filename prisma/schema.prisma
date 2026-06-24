@@ -2,7 +2,66 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Banco de dados a ser utilizado
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dev.db"
+}
+
+// Enums para listar os cargos
+enum UserRole {
+  employee
+  manager
+}
+
+// Enums para listar as categorias de reembolso
+enum Category {
+  food
+  services
+  transportation
+  accommodation
+  others
+}
+
+// Enums para listar os status dos reembolsos
+enum Status {
+  pending
+  approved
+  rejected
+}
+
+// MODELAGEM DO BANCO DE DADOS - USUÁRIO
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+
+  role      UserRole @default(employee)
+  refunds   Refund[]
+  
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime? @updatedAt @map("updated_at")
+
+//nome da tabela no banco de dados
+  @@map("users")
+}
+
+// MODELAGEM DO BANCO DE DADOS - REEMBOLSO
+model Refund {
+  id          String   @id @default(uuid())
+  name        String
+  amount      Float
+  category    Category
+  filename    String
+  status      Status   @default(pending)
+  
+  //Chave estrangeira para ligar com a tabela Users
+  userId      String   @map("user_id")
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime? @updatedAt @map("updated_at")
+  
+  @@map("refunds")
 }
