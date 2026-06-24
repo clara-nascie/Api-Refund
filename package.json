@@ -10,8 +10,16 @@
   "author": "Clara Nascimento",
   "license": "ISC",
   "description": "API de solicitação de reembolso",
+  
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
     "vite": "^8.1.0",
     "vite-plugin-html-inject": "^1.1.2"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
