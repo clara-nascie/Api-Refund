@@ -10,7 +10,7 @@ COPY . .
 
 # Dev target for backend/api
 FROM base AS api-dev
-EXPOSE 3000
+EXPOSE 3333
 CMD ["npm", "run", "dev"]
 
 # Dev target for frontend/web
