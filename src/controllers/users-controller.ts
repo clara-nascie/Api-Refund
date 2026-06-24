@@ -30,9 +30,17 @@ class UsersController {
     // Hashing da senha
     const hashedPassword = await hash(password as string, 8);
 
-    res.json({
-      hashedPassword
-    });
+    //se passou por todas as validações, cria o usuario
+    await prisma.user.create({
+      data: {
+        name,
+        email,
+        password: hashedPassword,
+        role
+      }
+    })
+
+    res.status(201).send("Usuario criado com sucesso");
   }
 }
 
