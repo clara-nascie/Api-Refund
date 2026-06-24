@@ -1,0 +1,70 @@
+<!-- ================== ÁREA DO COLABORADOR (EMPLOYEE) ================== -->
+<section id="view-employee" class="dashboard-container hidden">
+  <header class="dashboard-header">
+    <img src="/assets/logo.svg" alt="Logo Refund" class="logo-sm">
+    <div class="user-profile">
+      <img src="/assets/avatar.png" alt="Avatar Rodrigo" class="user-avatar">
+      <span class="user-name" id="employee-user-name">Rodrigo</span>
+      <button class="btn-logout" id="btn-employee-logout">
+        <i class="ph ph-sign-out"></i>
+      </button>
+    </div>
+  </header>
+  
+  <main class="dashboard-main">
+    <div class="form-card">
+      <div class="form-header">
+        <h2>Solicitação de reembolso</h2>
+        <p>Dados da despesa para solicitar reembolso.</p>
+      </div>
+      
+      <form id="refund-form" class="refund-form">
+        <div class="input-group">
+          <label for="refund-title">NOME DA SOLICITAÇÃO</label>
+          <div class="input-wrapper">
+            <input type="text" id="refund-title" placeholder="Ex: Almoço com cliente" required>
+          </div>
+        </div>
+        
+        <div class="inputs-row">
+          <div class="input-group">
+            <label for="refund-category">CATEGORIA</label>
+            <div class="input-wrapper">
+              <select id="refund-category" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Hospedagem">Hospedagem</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Serviços">Serviços</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="input-group val-input">
+            <label for="refund-value">VALOR (R$)</label>
+            <div class="input-wrapper">
+              <input type="number" id="refund-value" step="0.01" min="0.01" placeholder="0,00" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group file-input-group">
+          <label>COMPROVANTE</label>
+          <div class="file-drop-area" id="file-drop-area">
+            <i class="ph ph-cloud-arrow-up"></i>
+            <span class="file-message">Arraste ou clique para enviar</span>
+            <input type="file" id="refund-file" accept=".pdf,image/*" required>
+          </div>
+          <div class="file-selected-name hidden" id="file-selected-name">
+            <i class="ph ph-file-text"></i>
+            <span id="file-name-text">nome_do_arquivo.pdf</span>
+            <button type="button" id="btn-remove-file"><i class="ph ph-x"></i></button>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+    </div>
+  </main>
+</section>
