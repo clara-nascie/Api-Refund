@@ -1,0 +1,100 @@
+<!-- ================== ÁREA DO GESTOR (MANAGER) ================== -->
+<section id="view-manager" class="dashboard-container hidden">
+  <header class="dashboard-header">
+    <img src="/assets/logo.svg" alt="Logo Refund" class="logo-sm">
+    <div class="user-profile">
+      <span class="user-name">Admin</span>
+      <button class="btn-logout" id="btn-manager-logout">
+        <i class="ph ph-sign-out"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="dashboard-main-manager">
+    <div class="manager-card">
+      <div class="manager-card-header">
+        <h2>Solicitações</h2>
+        
+        <div class="search-bar">
+          <div class="input-wrapper search-input-wrapper">
+            <i class="ph ph-magnifying-glass search-icon"></i>
+            <input type="text" id="search-input" placeholder="Pesquisar pelo nome">
+          </div>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="refund-table">
+          <thead>
+            <tr>
+              <th>COLABORADOR</th>
+              <th>CATEGORIA</th>
+              <th class="text-right">VALOR</th>
+            </tr>
+          </thead>
+          <tbody id="refund-list-tbody">
+            <!-- Linhas inseridas dinamicamente via JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination-footer">
+        <button class="btn-icon-nav" id="btn-prev-page" disabled>
+          <i class="ph ph-caret-left"></i>
+        </button>
+        <span class="pagination-info" id="pagination-info">1/1</span>
+        <button class="btn-icon-nav" id="btn-next-page" disabled>
+          <i class="ph ph-caret-right"></i>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================== MODAL DE DETALHES DO REEMBOLSO ================== -->
+  <div id="details-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Detalhes da solicitação</h2>
+        <button class="btn-close-modal" id="btn-close-modal">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="detail-group">
+          <label>COLABORADOR</label>
+          <p id="detail-employee">Nome do Colaborador</p>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-group">
+            <label>CATEGORIA</label>
+            <div class="detail-category-tag">
+              <i class="ph" id="detail-category-icon"></i>
+              <span id="detail-category">Categoria</span>
+            </div>
+          </div>
+          <div class="detail-group">
+            <label>VALOR</label>
+            <p class="detail-value" id="detail-value">R$ 0,00</p>
+          </div>
+        </div>
+
+        <div class="detail-group">
+          <label>COMPROVANTE</label>
+          <div class="document-preview-box">
+            <i class="ph ph-file-pdf"></i>
+            <span id="detail-filename">comprovante.pdf</span>
+            <a href="#" class="btn-open-doc" id="btn-open-doc" target="_blank">
+              Abrir comprovante <i class="ph ph-arrow-square-out"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-primary" id="btn-modal-back">Voltar</button>
+      </div>
+    </div>
+  </div>
+</section>
