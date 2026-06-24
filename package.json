@@ -10,8 +10,8 @@
   "author": "Clara Nascimento",
   "license": "ISC",
   "description": "API de solicitação de reembolso",
-
   "devDependencies": {
-    "vite": "^8.1.0"
+    "vite": "^8.1.0",
+    "vite-plugin-html-inject": "^1.1.2"
   }
 }
