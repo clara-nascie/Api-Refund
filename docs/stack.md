@@ -56,3 +56,5 @@ Para permitir que o agente AI leia as especificações de design do Figma direta
     O Vite foi adicionado como dependência de desenvolvimento no `package.json` para rodar o projeto localmente com recarregamento rápido em tempo real, sem poluir a estrutura pura de arquivos.
 3.  **Organização Modular de Estilos**:
     Os estilos foram divididos em arquivos menores na pasta `css/` organizados por escopo (global, botões, inputs, modal, etc.) e importados no `style.css` raiz com `@import`. Isso facilita a manutenção e leitura.
+4.  **Organização Modular do HTML**:
+    Com a ajuda do plugin `vite-plugin-html-inject` configurado no Vite, o arquivo monolítico `index.html` foi dividido em componentes modulares na pasta `html/` (ex: `signin.html`, `signup.html`, `employee.html`, etc.) e são injetados em tempo de compilação usando a tag `<load src="..." />`. Isso simplificou o esqueleto principal e facilitou a manutenção de cada tela de forma isolada.

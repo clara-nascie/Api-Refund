@@ -6,7 +6,7 @@ Este documento mapeia o sistema de roteamento virtual do Frontend (SPA) e detalh
 
 ## 💻 Roteamento Virtual (Frontend SPA)
 
-O frontend foi estruturado como uma **Single Page Application (SPA)** virtual. Todas as telas estão no arquivo `index.html` e são controladas pelo JavaScript (`main.js`), que adiciona ou remove a classe `.hidden` das seções do DOM.
+O frontend foi estruturado como uma **Single Page Application (SPA)** virtual. As telas individuais estão modularizadas sob a pasta `html/` e são injetadas em tempo de compilação pelo Vite. No navegador, o controle de exibição é feito puramente em JavaScript (`main.js`), adicionando ou removendo a classe `.hidden` das seções carregadas no DOM da div `#app`.
 
 ### Mapeamento das Views HTML
 
