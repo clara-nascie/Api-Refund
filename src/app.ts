@@ -1,7 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 
 // Inicializa o express 
 const app = express();
+
+// Configura o cors
+app.use(cors());
 
 // Configura o express para usar json 
 app.use(express.json());
