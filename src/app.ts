@@ -3,7 +3,6 @@ import 'express-async-errors';
 import cors from 'cors';
 
 import { errorHandling } from './middlewares/error-handling';
-import { AppError } from './utils/AppError';
 
 // Inicializa o express 
 const app = express();
