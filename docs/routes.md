@@ -27,21 +27,23 @@ Quando integrarmos a API desenvolvida em **Express & TypeScript**, o JavaScript 
 Abaixo estão listadas as rotas do backend mapeadas:
 
 ### 1. Autenticação (Auth)
-*   `POST /users`
-    *   **Descrição**: Cadastra um novo colaborador no banco de dados.
-    *   **Corpo da Requisição**: `{ name, email, password }`
-*   `POST /sessions`
+*   `POST /users` [Implementado]
+    *   **Descrição**: Cadastra um novo colaborador ou gestor no banco de dados.
+    *   **Corpo da Requisição**: `{ name, email, password, role }`
+*   `POST /sessions` [Implementado]
     *   **Descrição**: Autentica o usuário e gera um token JWT.
     *   **Corpo da Requisição**: `{ email, password }`
-    *   **Resposta**: `{ token, user: { name, email, role } }`
+    *   **Resposta**: `{ token, user: { id, name, email, role } }`
 
 ### 2. Solicitações de Reembolso (Refunds)
-*   `POST /refunds`
-    *   **Descrição**: Cria uma nova solicitação de reembolso. Deve exigir autenticação (Token JWT no Header) e receber o arquivo físico via `multipart/form-data` (usando `multer`).
-    *   **Corpo da Requisição**: `{ title, category, value, file }`
-*   `GET /refunds`
+Todas as rotas sob `/refunds` são protegidas pelo middleware `ensureAuthentication`.
+*   `POST /refunds` [Estruturado & Protegido]
+    *   **Descrição**: Cria uma nova solicitação de reembolso.
+    *   **Regra de Autorização**: Permitido apenas para usuários do tipo `employee` via middleware `verifyUserAuthorization(["employee"])`.
+    *   **Planejamento pendente**: Integração com `multer` para upload físico de comprovantes.
+*   `GET /refunds` [Planejado]
     *   **Descrição**: Lista as solicitações cadastradas.
     *   **Parâmetros de Busca**: `?search=nome&page=1`
-    *   **Regra de Acesso**:
+    *   **Regras de Acesso**:
         *   Se for *Colaborador*: Retorna apenas os reembolsos criados pelo próprio usuário autenticado.
         *   Se for *Gestor*: Retorna todos os reembolsos registrados no sistema.
