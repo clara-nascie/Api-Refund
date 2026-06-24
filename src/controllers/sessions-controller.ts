@@ -44,8 +44,11 @@ class SessionController {
       expiresIn,
     });
 
+    // retira a senha do objeto que sera enviado
+    const {password: _, ...userWithoutPassword} = user;
+
     // Se tudo estiver certo, retorna o usuario
-     res.json({token, user});
+     res.json({token, user: userWithoutPassword});
     }
 }
 
