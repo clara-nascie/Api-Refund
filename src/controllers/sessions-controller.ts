@@ -1,5 +1,8 @@
 import { Request, Response } from "express";
 import { z } from "zod";
+import { prisma } from "../database/prisma";
+import { AppError } from "../utils/AppError";
+import { compare } from "bcrypt";
 
 // Cria a sessão do usuario
 class SessionController {
@@ -15,8 +18,19 @@ class SessionController {
     // Se o usuario nao existir, retorna erro
     // Se o usuario existir, retorna o usuario
     // Se a senha estiver errada, retorna erro
-    
 
+    const user = await prisma.user.findFirst({where: {email}});
+
+    if(!user){
+        throw new AppError("Email ou senha invalidos.", 401);
+    }
+    
+    // Compara a senha
+    const passwordMatch = await compare(password, user.password);
+
+    if(!passwordMatch){
+        throw new AppError("Email ou senha invalidos.", 401);
+    }
 
     // Se tudo estiver certo, retorna o usuario
      res.json({email, password});
