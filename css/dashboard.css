@@ -24,6 +24,15 @@
   gap: 16px;
 }
 
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--gray-300);
+}
+
+
 .user-name {
   font-weight: 600;
   font-size: 14px;

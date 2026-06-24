@@ -107,3 +107,17 @@ section {
   font-weight: 800;
   letter-spacing: -0.03em;
 }
+
+/* Logo */
+.logo {
+  width: 102px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logo-sm {
+  width: 102px;
+  height: 32px;
+  object-fit: contain;
+}
+
